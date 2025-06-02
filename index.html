@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BledGo – Application</title>
+  <style>
+    :root {
+      --bleu-clair: #e0f4ff;
+      --bleu-moyen: #00aaff;
+      --bleu-fonce: #0077cc;
+      --texte: #222;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bleu-clair);
+      color: var(--texte);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--bleu-moyen);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .section {
+      background: white;
+      margin: 20px auto;
+      padding: 25px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+    }
+    h2 {
+      color: var(--bleu-fonce);
+      border-bottom: 2px solid var(--bleu-moyen);
+      padding-bottom: 5px;
+    }
+    .screenshot-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .screenshot-row img {
+      width: 160px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease-in-out;
+    }
+    .screenshot-row img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9em;
+    }
+    a {
+      color: var(--bleu-fonce);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .hidden { display: none; }
+    #langSelect { margin: 20px auto; display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BledGo – Application Mobile</h1>
+  <label for="langSelect">🌍 Choisir la langue / Choose language:</label>
+  <select id="langSelect">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+    <option value="it">Italiano</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+  </select>
+</header>
+
+<div id="multilang-content">
+  <!-- Français -->
+  <div class="lang fr">
+    <div class="section">
+      <h2>📱 Captures d'écran</h2>
+      <div class="screenshot-row">
+        <img src="bledgoimg1.jpg" alt="Capture d'écran 1" />
+        <img src="bledgoimg2.jpg" alt="Capture d'écran 2" />
+        <img src="bledgoimg3.jpg" alt="Capture d'écran 3" />
+        <img src="bledgoimg4.jpg" alt="Capture d'écran 4" />
+        <img src="bledgoimg5.jpg" alt="Capture d'écran 5" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧭 Introduction</h2>
+      <p>BledGo est une application destinée à la communauté maghrébine (Tunisie, Algérie, Maroc) vivant en Europe. Elle facilite l’interaction entre les utilisateurs et les sociétés de transport de marchandises opérant entre l’Europe et le Maghreb. L’application permet aux transporteurs de gérer leurs trajets et aux clients de réserver facilement des services de transport.</p>
+      <p>La version actuelle est diffusée à titre gratuit et bêta pour test et amélioration.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Informations générales</h2>
+      <p>L’application BledGo est proposée en version bêta gratuite dans un but non commercial. Elle est développée par un particulier.</p>
+
+      <h2>2. Statut de l’éditeur</h2>
+      <p>Cette application est éditée à titre personnel, sans statut professionnel ni immatriculation commerciale. Conformément à l’article 6 III-2 de la loi n°2004-575 du 21 juin 2004 (LCEN), l’identité de l’éditeur peut être communiquée uniquement aux autorités judiciaires compétentes sur demande formelle et légitime.</p>
+
+      <h2>3. Hébergement</h2>
+      <p>L’application est hébergée par :</p>
+      <p>Firebase – Google LLC<br />1600 Amphitheatre Parkway,<br />Mountain View, CA 94043, États-Unis<br /><a href="https://firebase.google.com">https://firebase.google.com</a></p>
+
+      <h2>4. Propriété intellectuelle</h2>
+      <p>Tous les éléments présents sur l’application BledGo (contenus, fonctionnalités, design, code source, etc.) sont la propriété exclusive de leur auteur, sauf mentions contraires. Toute reproduction, modification ou utilisation sans autorisation est interdite.</p>
+
+      <h2>5. Données personnelles</h2>
+      <p>L'application BledGo collecte certaines données personnelles lors de la création de compte, notamment : nom, prénom, adresse email, numéro de téléphone.</p>
+      <p>Ces données sont nécessaires au bon fonctionnement de l’application, en particulier pour :</p>
+      <ul>
+        <li>Permettre l’inscription et l’authentification des utilisateurs ;</li>
+        <li>Gérer les réservations de transport ;</li>
+        <li>Faciliter la mise en relation entre clients et transporteurs.</li>
+      </ul>
+      <p>Ces informations sont stockées de manière sécurisée et ne sont pas partagées avec des tiers sans le consentement explicite de l’utilisateur.</p>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD), chaque utilisateur dispose des droits suivants :</p>
+      <ul>
+        <li>Droit d’accès, de rectification et de suppression de ses données ;</li>
+        <li>Droit d’opposition au traitement ;</li>
+        <li>Droit à la portabilité des données.</li>
+      </ul>
+      <p>Pour exercer ces droits ou pour toute question relative à la gestion des données personnelles, l’utilisateur peut contacter le responsable via l’adresse email fournie dans l’application.</p>
+
+      <h2>6. Responsabilité</h2>
+      <p>L’application BledGo est fournie “en l’état” dans le cadre d’une version bêta. Aucune garantie n’est fournie quant à son fonctionnement ou à l’absence d’erreurs. L’éditeur décline toute responsabilité en cas de dommage direct ou indirect lié à son utilisation.</p>
+
+      <h2>7. Droit applicable</h2>
+      <p>Les présentes mentions légales sont régies par la législation française. Tout litige non résolu à l’amiable sera soumis à la compétence exclusive des juridictions françaises.</p>
+    </div>
+
+    <div class="section">
+      <h2>📧 Support</h2>
+      <p>Pour toute demande de support, contactez-nous à : <a href="mailto:bledgo2025@gmail.com">bledgo2025@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="lang en hidden">
+    <div class="section">
+      <h2>📱 Screenshots</h2>
+      <div class="screenshot-row">
+        <img src="bledgoimg1.jpg" alt="Screenshot 1" />
+        <img src="bledgoimg2.jpg" alt="Screenshot 2" />
+        <img src="bledgoimg3.jpg" alt="Screenshot 3" />
+        <img src="bledgoimg4.jpg" alt="Screenshot 4" />
+        <img src="bledgoimg5.jpg" alt="Screenshot 5" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧭 Introduction</h2>
+      <p>BledGo is an application aimed at the Maghreb community (Tunisia, Algeria, Morocco) living in Europe. It facilitates interaction between users and freight transport companies operating between Europe and the Maghreb. The application allows carriers to manage their routes and clients to easily book transport services.</p>
+      <p>The current version is distributed free of charge and in beta for testing and improvement purposes.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. General Information</h2>
+      <p>The BledGo app is provided in a free beta version for non-commercial purposes. It is developed by an individual.</p>
+
+      <h2>2. Publisher Status</h2>
+      <p>This application is published personally, without professional status or commercial registration. According to Article 6 III-2 of Law No. 2004-575 of June 21, 2004 (LCEN), the publisher's identity can only be communicated to the competent judicial authorities upon a formal and legitimate request.</p>
+
+      <h2>3. Hosting</h2>
+      <p>The application is hosted by:</p>
+      <p>Firebase – Google LLC<br />1600 Amphitheatre Parkway,<br />Mountain View, CA 94043, USA<br /><a href="https://firebase.google.com">https://firebase.google.com</a></p>
+
+      <h2>4. Intellectual Property</h2>
+      <p>All elements on the BledGo application (content, features, design, source code, etc.) are the exclusive property of their author unless otherwise indicated. Any reproduction, modification or use without authorization is prohibited.</p>
+
+      <h2>5. Personal Data</h2>
+      <p>The BledGo app collects certain personal data when creating an account, including: name, first name, email address, phone number.</p>
+      <p>These data are necessary for the proper functioning of the application, particularly to:</p>
+      <ul>
+        <li>Allow user registration and authentication;</li>
+        <li>Manage transport bookings;</li>
+        <li>Facilitate contact between clients and carriers.</li>
+      </ul>
+      <p>This information is stored securely and is not shared with third parties without the explicit consent of the user.</p>
+      <p>In accordance with the General Data Protection Regulation (GDPR), each user has the following rights:</p>
+      <ul>
+        <li>Right of access, rectification and deletion of their data;</li>
+        <li>Right to object to processing;</li>
+        <li>Right to data portability.</li>
+      </ul>
+      <p>To exercise these rights or for any questions related to data management, users can contact the responsible person via the email provided in the app.</p>
+
+      <h2>6. Liability</h2>
+      <p>The BledGo app is provided \"as is\" in beta. No warranty is provided regarding its operation or the absence of errors. The publisher declines all responsibility for any direct or indirect damage related to its use.</p>
+
+      <h2>7. Applicable Law</h2>
+      <p>These legal notices are governed by French law. Any dispute not resolved amicably will be submitted to the exclusive jurisdiction of the French courts.</p>
+    </div>
+
+    <div class="section">
+      <h2>📧 Support</h2>
+      <p>For support requests, contact us at: <a href="mailto:bledgo2025@gmail.com">bledgo2025@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Italiano -->
+  <div class="lang it hidden">
+    <div class="section">
+      <h2>📱 Screenshot</h2>
+      <div class="screenshot-row">
+        <img src="bledgoimg1.jpg" alt="Screenshot 1" />
+        <img src="bledgoimg2.jpg" alt="Screenshot 2" />
+        <img src="bledgoimg3.jpg" alt="Screenshot 3" />
+        <img src="bledgoimg4.jpg" alt="Screenshot 4" />
+        <img src="bledgoimg5.jpg" alt="Screenshot 5" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧭 Introduzione</h2>
+      <p>BledGo è un'applicazione rivolta alla comunità maghrebina (Tunisia, Algeria, Marocco) che vive in Europa. Facilita l'interazione tra gli utenti e le società di trasporto merci che operano tra l'Europa e il Maghreb. L'app consente ai trasportatori di gestire i propri percorsi e ai clienti di prenotare facilmente i servizi di trasporto.</p>
+      <p>La versione attuale è distribuita gratuitamente in versione beta per test e miglioramenti.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Informazioni Generali</h2>
+      <p>L'app BledGo è fornita in versione beta gratuita per scopi non commerciali. È sviluppata da un privato.</p>
+
+      <h2>2. Stato dell'Editore</h2>
+      <p>Questa applicazione è pubblicata a titolo personale, senza status professionale né registrazione commerciale. In conformità all'articolo 6 III-2 della legge n. 2004-575 del 21 giugno 2004 (LCEN), l'identità dell'editore può essere comunicata solo alle autorità giudiziarie competenti su richiesta formale e legittima.</p>
+
+      <h2>3. Hosting</h2>
+      <p>L'applicazione è ospitata da:</p>
+      <p>Firebase – Google LLC<br />1600 Amphitheatre Parkway,<br />Mountain View, CA 94043, Stati Uniti<br /><a href="https://firebase.google.com">https://firebase.google.com</a></p>
+
+      <h2>4. Proprietà Intellettuale</h2>
+      <p>Tutti gli elementi presenti nell'app BledGo (contenuti, funzionalità, design, codice sorgente, ecc.) sono di proprietà esclusiva dell'autore, salvo diversa indicazione. È vietata qualsiasi riproduzione, modifica o utilizzo senza autorizzazione.</p>
+
+      <h2>5. Dati Personali</h2>
+      <p>L'app BledGo raccoglie alcuni dati personali durante la creazione dell'account, tra cui: nome, cognome, indirizzo email, numero di telefono.</p>
+      <p>Questi dati sono necessari per il corretto funzionamento dell'app, in particolare per:</p>
+      <ul>
+        <li>Consentire la registrazione e l'autenticazione degli utenti;</li>
+        <li>Gestire le prenotazioni di trasporto;</li>
+        <li>Facilitare il contatto tra clienti e trasportatori.</li>
+      </ul>
+      <p>Queste informazioni sono conservate in modo sicuro e non vengono condivise con terzi senza il consenso esplicito dell'utente.</p>
+      <p>In conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR), ogni utente ha i seguenti diritti:</p>
+      <ul>
+        <li>Diritto di accesso, rettifica e cancellazione dei propri dati;</li>
+        <li>Diritto di opposizione al trattamento;</li>
+        <li>Diritto alla portabilità dei dati.</li>
+      </ul>
+      <p>Per esercitare tali diritti o per qualsiasi domanda relativa alla gestione dei dati, l'utente può contattare il responsabile all'indirizzo email fornito nell'app.</p>
+
+      <h2>6. Responsabilità</h2>
+      <p>L'app BledGo è fornita “così com’è” in versione beta. Non viene fornita alcuna garanzia sul suo funzionamento o sull’assenza di errori. L’editore declina ogni responsabilità per eventuali danni diretti o indiretti legati al suo utilizzo.</p>
+
+      <h2>7. Legge Applicabile</h2>
+      <p>Le presenti note legali sono regolate dalla legge francese. Qualsiasi controversia non risolta amichevolmente sarà sottoposta alla giurisdizione esclusiva dei tribunali francesi.</p>
+    </div>
+
+    <div class="section">
+      <h2>📧 Supporto</h2>
+      <p>Per domande o richieste di supporto, contattaci a: <a href="mailto:bledgo2025@gmail.com">bledgo2025@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Deutsch -->
+  <div class="lang de hidden">
+    <div class="section">
+      <h2>📱 Screenshots</h2>
+      <div class="screenshot-row">
+        <img src="bledgoimg1.jpg" alt="Screenshot 1" />
+        <img src="bledgoimg2.jpg" alt="Screenshot 2" />
+        <img src="bledgoimg3.jpg" alt="Screenshot 3" />
+        <img src="bledgoimg4.jpg" alt="Screenshot 4" />
+        <img src="bledgoimg5.jpg" alt="Screenshot 5" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧭 Einführung</h2>
+      <p>BledGo ist eine App für die Maghreb-Gemeinschaft (Tunesien, Algerien, Marokko), die in Europa lebt. Sie erleichtert die Interaktion zwischen Nutzern und Frachttransportunternehmen, die zwischen Europa und dem Maghreb tätig sind. Die App ermöglicht es Spediteuren, ihre Routen zu verwalten und Kunden, Transportdienstleistungen einfach zu buchen.</p>
+      <p>Die aktuelle Version wird kostenlos als Beta-Version für Tests und Verbesserungen bereitgestellt.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Allgemeine Informationen</h2>
+      <p>Die BledGo-App wird in einer kostenlosen Beta-Version für nicht-kommerzielle Zwecke angeboten. Sie wurde von einer Privatperson entwickelt.</p>
+
+      <h2>2. Herausgeberstatus</h2>
+      <p>Diese Anwendung wird persönlich ohne beruflichen Status oder gewerbliche Registrierung veröffentlicht. Gemäß Artikel 6 III-2 des Gesetzes Nr. 2004-575 vom 21. Juni 2004 (LCEN) kann die Identität des Herausgebers nur den zuständigen Justizbehörden auf formelle und legitime Anfrage mitgeteilt werden.</p>
+
+      <h2>3. Hosting</h2>
+      <p>Die Anwendung wird gehostet von:</p>
+      <p>Firebase – Google LLC<br />1600 Amphitheatre Parkway,<br />Mountain View, CA 94043, USA<br /><a href="https://firebase.google.com">https://firebase.google.com</a></p>
+
+      <h2>4. Geistiges Eigentum</h2>
+      <p>Alle Elemente der BledGo-App (Inhalte, Funktionen, Design, Quellcode usw.) sind ausschließliches Eigentum des Autors, sofern nicht anders angegeben. Jede Reproduktion, Änderung oder Nutzung ohne Genehmigung ist untersagt.</p>
+
+      <h2>5. Persönliche Daten</h2>
+      <p>Die BledGo-App sammelt bei der Kontoerstellung bestimmte persönliche Daten, darunter: Name, Vorname, E-Mail-Adresse, Telefonnummer.</p>
+      <p>Diese Daten sind für die ordnungsgemäße Funktion der App erforderlich, insbesondere um:</p>
+      <ul>
+        <li>Die Registrierung und Authentifizierung der Nutzer zu ermöglichen;</li>
+        <li>Transportbuchungen zu verwalten;</li>
+        <li>Die Kontaktaufnahme zwischen Kunden und Spediteuren zu erleichtern.</li>
+      </ul>
+      <p>Diese Informationen werden sicher gespeichert und nicht ohne ausdrückliche Zustimmung des Nutzers an Dritte weitergegeben.</p>
+      <p>Gemäß der Datenschutz-Grundverordnung (DSGVO) hat jeder Nutzer folgende Rechte:</p>
+      <ul>
+        <li>Recht auf Zugang, Berichtigung und Löschung seiner Daten;</li>
+        <li>Recht auf Widerspruch gegen die Verarbeitung;</li>
+        <li>Recht auf Datenübertragbarkeit.</li>
+      </ul>
+      <p>Zur Ausübung dieser Rechte oder bei Fragen zur Datenverwaltung kann der Nutzer die verantwortliche Person über die im App angegebene E-Mail-Adresse kontaktieren.</p>
+
+      <h2>6. Haftung</h2>
+      <p>Die BledGo-App wird „wie besehen“ in der Beta-Version bereitgestellt. Es wird keine Garantie für die Funktion oder Fehlerfreiheit übernommen. Der Herausgeber lehnt jegliche Haftung für direkte oder indirekte Schäden im Zusammenhang mit der Nutzung ab.</p>
+
+      <h2>7. Anwendbares Recht</h2>
+      <p>Diese rechtlichen Hinweise unterliegen französischem Recht. Alle nicht gütlich beigelegten Streitigkeiten unterliegen der ausschließlichen Zuständigkeit französischer Gerichte.</p>
+    </div>
+
+    <div class="section">
+      <h2>📧 Support</h2>
+      <p>Für Supportanfragen kontaktieren Sie uns unter: <a href="mailto:bledgo2025@gmail.com">bledgo2025@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Español -->
+  <div class="lang es hidden">
+    <div class="section">
+      <h2>📱 Capturas de pantalla</h2>
+      <div class="screenshot-row">
+        <img src="bledgoimg1.jpg" alt="Captura de pantalla 1" />
+        <img src="bledgoimg2.jpg" alt="Captura de pantalla 2" />
+        <img src="bledgoimg3.jpg" alt="Captura de pantalla 3" />
+        <img src="bledgoimg4.jpg" alt="Captura de pantalla 4" />
+        <img src="bledgoimg5.jpg" alt="Captura de pantalla 5" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧭 Introducción</h2>
+      <p>BledGo es una aplicación dirigida a la comunidad del Magreb (Túnez, Argelia, Marruecos) que vive en Europa. Facilita la interacción entre los usuarios y las empresas de transporte de mercancías que operan entre Europa y el Magreb. La aplicación permite a los transportistas gestionar sus rutas y a los clientes reservar fácilmente servicios de transporte.</p>
+      <p>La versión actual se distribuye gratuitamente y en beta para pruebas y mejoras.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Información general</h2>
+      <p>La aplicación BledGo se ofrece en versión beta gratuita para fines no comerciales. Está desarrollada por un particular.</p>
+
+      <h2>2. Estado del editor</h2>
+      <p>Esta aplicación se publica a título personal, sin estatus profesional ni registro comercial. De acuerdo con el artículo 6 III-2 de la ley n.º 2004-575 del 21 de junio de 2004 (LCEN), la identidad del editor solo puede comunicarse a las autoridades judiciales competentes previa solicitud formal y legítima.</p>
+
+      <h2>3. Alojamiento</h2>
+      <p>La aplicación está alojada por:</p>
+      <p>Firebase – Google LLC<br />1600 Amphitheatre Parkway,<br />Mountain View, CA 94043, Estados Unidos<br /><a href="https://firebase.google.com">https://firebase.google.com</a></p>
+
+      <h2>4. Propiedad intelectual</h2>
+      <p>Todos los elementos presentes en la aplicación BledGo (contenido, funcionalidades, diseño, código fuente, etc.) son propiedad exclusiva de su autor, salvo indicación contraria. Se prohíbe cualquier reproducción, modificación o uso sin autorización.</p>
+
+      <h2>5. Datos personales</h2>
+      <p>La aplicación BledGo recopila ciertos datos personales durante la creación de la cuenta, incluyendo: nombre, apellido, dirección de correo electrónico, número de teléfono.</p>
+      <p>Estos datos son necesarios para el correcto funcionamiento de la aplicación, en particular para:</p>
+      <ul>
+        <li>Permitir el registro y autenticación de usuarios;</li>
+        <li>Gestionar las reservas de transporte;</li>
+        <li>Facilitar la conexión entre clientes y transportistas.</li>
+      </ul>
+      <p>Esta información se almacena de forma segura y no se comparte con terceros sin el consentimiento explícito del usuario.</p>
+      <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD), cada usuario tiene los siguientes derechos:</p>
+      <ul>
+        <li>Derecho de acceso, rectificación y supresión de sus datos;</li>
+        <li>Derecho a oponerse al tratamiento;</li>
+        <li>Derecho a la portabilidad de los datos.</li>
+      </ul>
+      <p>Para ejercer estos derechos o para cualquier pregunta relacionada con la gestión de datos, el usuario puede contactar al responsable a través del correo electrónico proporcionado en la aplicación.</p>
+
+      <h2>6. Responsabilidad</h2>
+      <p>La aplicación BledGo se proporciona “tal cual” en versión beta. No se ofrece ninguna garantía sobre su funcionamiento o ausencia de errores. El editor declina toda responsabilidad por daños directos o indirectos relacionados con su uso.</p>
+
+      <h2>7. Ley aplicable</h2>
+      <p>Estos avisos legales se rigen por la legislación francesa. Cualquier disputa no resuelta amistosamente se someterá a la jurisdicción exclusiva de los tribunales franceses.</p>
+    </div>
+
+    <div class="section">
+      <h2>📧 Soporte</h2>
+      <p>Para solicitudes de soporte, contáctenos en: <a href="mailto:bledgo2025@gmail.com">bledgo2025@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const langSelect = document.getElementById('langSelect');
+  const allLangDivs = document.querySelectorAll('.lang');
+
+  function showLanguage(lang) {
+    allLangDivs.forEach(div => {
+      if (div.classList.contains(lang)) {
+        div.classList.remove('hidden');
+      } else {
+        div.classList.add('hidden');
+      }
+    });
+  }
+
+  langSelect.addEventListener('change', (e) => {
+    showLanguage(e.target.value);
+  });
+
+  // Initial display
+  showLanguage(langSelect.value);
+</script>
+
+</body>
+</html>
